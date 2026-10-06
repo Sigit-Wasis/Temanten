@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #597445; /* Sage/Olive Green */
+  --color-secondary: #729762;
+  --color-background: #FDFBF7; /* Ivory / Off-white */
+  --color-surface: #F5F2EA; /* Soft beige */
+  --color-text: #2C3E2D; /* Dark green text */
+  --color-muted: #6B7C6C;
+  --color-gold: #C5A880;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-text font-sans antialiased overflow-x-hidden;
+  }
+  ::selection {
+    background-color: rgba(89, 116, 69, 0.2); /* primary/20 */
+    color: var(--color-primary);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Hiding scrollbar but keep functionality */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Islamic Geometric Pattern Background */
+.bg-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.83-1.66 1.66-.83-.83L51.306 0H48.48l2.488 2.488-1.66 1.66L46.82 1.66l-.83.83-1.66-1.66.83-.83L42.673 0h-2.827l2.488 2.488-1.66 1.66L38.187 1.66l-.83.83-1.66-1.66.83-.83L34.039 0h-2.827l2.488 2.488-1.66 1.66-2.488-2.488-.83.83-1.66-1.66.83-.83L25.405 0h-2.827l2.488 2.488-1.66 1.66-2.488-2.488-.83.83-1.66-1.66.83-.83L16.772 0h-2.827l2.488 2.488-1.66 1.66-2.488-2.488-.83.83-1.66-1.66.83-.83L8.138 0H5.311l2.488 2.488-1.66 1.66L3.65 1.66l-.83.83-1.66-1.66.83-.83L-.504 0h61.131zM0 54.627l.83.83-1.66 1.66-.83-.83L0 51.306v-2.827l2.488 2.488 1.66-1.66L1.66 46.82l.83-.83-1.66-1.66-.83.83L0 42.673v-2.827l2.488 2.488 1.66-1.66L1.66 38.187l.83-.83-1.66-1.66-.83.83L0 34.039v-2.827l2.488 2.488 1.66-1.66L1.66 29.55l.83-.83-1.66-1.66-.83.83L0 25.405v-2.827l2.488 2.488 1.66-1.66L1.66 20.916l.83-.83-1.66-1.66-.83.83L0 16.772v-2.827l2.488 2.488 1.66-1.66L1.66 12.282l.83-.83-1.66-1.66-.83.83L0 8.138V5.311l2.488 2.488 1.66-1.66L1.66 3.65l.83-.83-1.66-1.66-.83.83L0-.504v61.131H-.504V54.627H0zM60 54.627l-.83.83 1.66 1.66.83-.83L60 51.306v-2.827l-2.488 2.488-1.66-1.66L58.34 46.82l-.83-.83 1.66-1.66.83.83L60 42.673v-2.827l-2.488 2.488-1.66-1.66L58.34 38.187l-.83-.83 1.66-1.66.83.83L60 34.039v-2.827l-2.488 2.488-1.66-1.66L58.34 29.55l-.83-.83 1.66-1.66.83.83L60 25.405v-2.827l-2.488 2.488-1.66-1.66L58.34 20.916l-.83-.83 1.66-1.66.83.83L60 16.772v-2.827l-2.488 2.488-1.66-1.66L58.34 12.282l-.83-.83 1.66-1.66.83.83L60 8.138V5.311l-2.488 2.488-1.66-1.66L58.34 3.65l-.83-.83 1.66-1.66.83.83L60-.504v61.131h.504V54.627H60zM54.627 60l.83-.83-1.66-1.66-.83.83L51.306 60H48.48l2.488-2.488-1.66-1.66L46.82 58.34l-.83-.83-1.66 1.66.83.83L42.673 60h-2.827l2.488-2.488-1.66-1.66L38.187 58.34l-.83-.83-1.66 1.66.83.83L34.039 60h-2.827l2.488-2.488-1.66-1.66-2.488 2.488-.83-.83-1.66 1.66.83.83L25.405 60h-2.827l2.488-2.488-1.66-1.66-2.488 2.488-.83-.83-1.66 1.66.83.83L16.772 60h-2.827l2.488-2.488-1.66-1.66-2.488 2.488-.83-.83-1.66 1.66.83.83L8.138 60H5.311l2.488-2.488-1.66-1.66L3.65 58.34l-.83-.83-1.66 1.66.83.83L-.504 60h61.131z' fill='%23C5A880' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.arch-mask {
+  clip-path: polygon(0 30%, 10% 10%, 30% 0, 70% 0, 90% 10%, 100% 30%, 100% 100%, 0 100%);
+}
+
+.arch-top {
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+}
